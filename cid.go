@@ -242,7 +242,7 @@ func Decode(v string) (Cid, error) {
 		return Undef, ErrCidTooShort
 	}
 
-	if len(v) == 46 && v[:2] == "Qm" {
+	if len(v) == 46 && v[:2] == "Ci" {
 		hash, err := mh.FromB58String(v)
 		if err != nil {
 			return Undef, err
